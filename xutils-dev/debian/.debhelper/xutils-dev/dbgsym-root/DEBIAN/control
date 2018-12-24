@@ -1,0 +1,12 @@
+Package: xutils-dev-dbgsym
+Source: xutils-dev
+Version: 1:7.7+6
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 107
+Depends: xutils-dev (= 1:7.7+6)
+Section: debug
+Priority: optional
+Description: debug symbols for xutils-dev
+Build-Ids: 01dc50f342e573405ce785b28b4d694a044eb851 30080ef717c72a76ad31bcd1ec87ed76b7c61ba3 40fc82b299c6e9df05ac656a2a151e5c28fa3e03 a1f9b0877ad0b8047e437592b7167e16936ddcb7

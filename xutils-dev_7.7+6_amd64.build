@@ -1,0 +1,940 @@
+ dpkg-buildpackage -D -us -uc -ui -b -Jauto -Pnobiarch,nocheck,nodoc
+dpkg-buildpackage: info: source package xutils-dev
+dpkg-buildpackage: info: source version 1:7.7+6
+dpkg-buildpackage: info: source distribution UNRELEASED
+dpkg-buildpackage: info: source changed by Julien Cristau <jcristau@debian.org>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean --with quilt,autotools-dev --parallel
+dh: The autotools-dev sequence is deprecated and replaced by dh in debhelper (>= 9.20160115)
+dh: This feature will be removed in compat 12.
+   debian/rules override_dh_auto_clean
+make[1]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev'
+dh_auto_clean -Dgccmakedep -Bgccmakedep-build
+dh_auto_clean -Dimake -Bimake-build
+dh_auto_clean -Dlndir -Blndir-build
+dh_auto_clean -Dmakedepend -Bmakedepend-build
+dh_auto_clean -Dutil-macros -Butil-macros-build
+dh_auto_clean -Dxorg-cf-files -Bxorg-cf-files-build
+dh override_dh_auto_clean --with quilt,autotools-dev --parallel
+make[1]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev'
+   dh_quilt_unpatch -O--parallel
+Removing patch 08_xorg_with_xmlto.diff
+Restoring util-macros/xorg-macros.m4.in
+
+Removing patch 07_gnu_manpath.diff
+Restoring xorg-cf-files/gnu.cf
+
+Removing patch 06_font_path.diff
+Restoring xorg-cf-files/X11.tmpl
+
+Removing patch 05_xaw_without_xp.diff
+Restoring xorg-cf-files/FreeBSD.cf
+Restoring xorg-cf-files/gnu.cf
+Restoring xorg-cf-files/linux.cf
+
+Removing patch 04_xutils-dev-debian.diff
+Restoring xorg-cf-files/xorg.cf
+Restoring xorg-cf-files/xfree86.cf
+Restoring xorg-cf-files/X11.tmpl
+Restoring xorg-cf-files/usl.cf
+Restoring xorg-cf-files/sco5.cf
+Restoring xorg-cf-files/NetBSD.cf
+Restoring xorg-cf-files/linux.cf
+Restoring xorg-cf-files/Library.tmpl
+Restoring xorg-cf-files/Imake.tmpl
+Restoring xorg-cf-files/Imake.rules
+Restoring xorg-cf-files/gnuLib.tmpl
+Restoring xorg-cf-files/gnuLib.rules
+Restoring xorg-cf-files/gnu.cf
+Restoring xorg-cf-files/bsdLib.rules
+
+Removing patch 03_xutils-dev-FHS.diff
+Restoring xorg-cf-files/linux.cf
+
+No patches applied
+   dh_autotools-dev_restoreconfig -O--parallel
+dh_autotools-dev_restoreconfig: dh_autotools-dev_restoreconfig is deprecated; please see dh_autotools-dev_restoreconfig(1) for a replacement
+dh_autotools-dev_restoreconfig: This feature will be removed in compat 12.
+   dh_clean -O--parallel
+FAKEROOTKEY=776727370 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules clean
+ debian/rules build
+dh build --with quilt,autotools-dev --parallel
+dh: The autotools-dev sequence is deprecated and replaced by dh in debhelper (>= 9.20160115)
+dh: This feature will be removed in compat 12.
+   dh_quilt_patch -O--parallel
+Applying patch 03_xutils-dev-FHS.diff
+patching file xorg-cf-files/linux.cf
+
+Applying patch 04_xutils-dev-debian.diff
+patching file xorg-cf-files/bsdLib.rules
+patching file xorg-cf-files/gnu.cf
+patching file xorg-cf-files/gnuLib.rules
+patching file xorg-cf-files/gnuLib.tmpl
+patching file xorg-cf-files/Imake.rules
+patching file xorg-cf-files/Imake.tmpl
+patching file xorg-cf-files/Library.tmpl
+patching file xorg-cf-files/linux.cf
+patching file xorg-cf-files/NetBSD.cf
+patching file xorg-cf-files/sco5.cf
+patching file xorg-cf-files/usl.cf
+patching file xorg-cf-files/X11.tmpl
+patching file xorg-cf-files/xfree86.cf
+patching file xorg-cf-files/xorg.cf
+
+Applying patch 05_xaw_without_xp.diff
+patching file xorg-cf-files/linux.cf
+Hunk #1 succeeded at 1167 (offset 9 lines).
+patching file xorg-cf-files/gnu.cf
+patching file xorg-cf-files/FreeBSD.cf
+
+Applying patch 06_font_path.diff
+patching file xorg-cf-files/X11.tmpl
+
+Applying patch 07_gnu_manpath.diff
+patching file xorg-cf-files/gnu.cf
+
+Applying patch 08_xorg_with_xmlto.diff
+patching file util-macros/xorg-macros.m4.in
+Hunk #1 succeeded at 422 (offset -4 lines).
+
+Now at patch 08_xorg_with_xmlto.diff
+   dh_update_autotools_config -O--parallel
+   dh_autotools-dev_updateconfig -O--parallel
+dh_autotools-dev_updateconfig: dh_autotools-dev_updateconfig is deprecated; please see dh_autotools-dev_updateconfig(1) for a replacement
+dh_autotools-dev_updateconfig: This feature will be removed in compat 12.
+   debian/rules override_dh_auto_configure
+make[1]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev'
+dh_auto_configure -Dgccmakedep -Bgccmakedep-build -- \
+	--disable-silent-rules \
+	--disable-ccmakedep \
+	--libdir=\${exec_prefix}/lib \
+	CFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall" CPPFLAGS="-Wdate-time -D_FORTIFY_SOURCE=2" CXXFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security" FCFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" FFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" GCJFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong" LDFLAGS="-Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax" OBJCFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security" OBJCXXFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security" 
+dh_auto_configure -Dimake -Bimake-build -- \
+	--disable-silent-rules \
+	--disable-ccmakedep \
+	--libdir=\${exec_prefix}/lib \
+	CFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall" CPPFLAGS="-Wdate-time -D_FORTIFY_SOURCE=2" CXXFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security" FCFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" FFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" GCJFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong" LDFLAGS="-Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax" OBJCFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security" OBJCXXFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security" 
+	cd gccmakedep-build && ../gccmakedep/configure --build=x86_64-linux-gnu --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir=\${prefix}/lib/x86_64-linux-gnu --libexecdir=\${prefix}/lib/x86_64-linux-gnu --disable-maintainer-mode --disable-dependency-tracking --disable-silent-rules --disable-ccmakedep --libdir=\${exec_prefix}/lib "CFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall" "CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=2" "CXXFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security" "FCFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" "FFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" "GCJFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong" "LDFLAGS=-Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax" "OBJCFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security" "OBJCXXFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security"
+dh_auto_configure -Dlndir -Blndir-build -- \
+	--disable-silent-rules \
+	--disable-ccmakedep \
+	--libdir=\${exec_prefix}/lib \
+	CFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall" CPPFLAGS="-Wdate-time -D_FORTIFY_SOURCE=2" CXXFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security" FCFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" FFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" GCJFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong" LDFLAGS="-Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax" OBJCFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security" OBJCXXFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security" 
+	cd imake-build && ../imake/configure --build=x86_64-linux-gnu --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir=\${prefix}/lib/x86_64-linux-gnu --libexecdir=\${prefix}/lib/x86_64-linux-gnu --disable-maintainer-mode --disable-dependency-tracking --disable-silent-rules --disable-ccmakedep --libdir=\${exec_prefix}/lib "CFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall" "CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=2" "CXXFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security" "FCFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" "FFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" "GCJFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong" "LDFLAGS=-Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax" "OBJCFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security" "OBJCXXFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security"
+dh_auto_configure -Dmakedepend -Bmakedepend-build -- \
+	--disable-silent-rules \
+	--disable-ccmakedep \
+	--libdir=\${exec_prefix}/lib \
+	CFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall" CPPFLAGS="-Wdate-time -D_FORTIFY_SOURCE=2" CXXFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security" FCFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" FFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" GCJFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong" LDFLAGS="-Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax" OBJCFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security" OBJCXXFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security" 
+	cd lndir-build && ../lndir/configure --build=x86_64-linux-gnu --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir=\${prefix}/lib/x86_64-linux-gnu --libexecdir=\${prefix}/lib/x86_64-linux-gnu --disable-maintainer-mode --disable-dependency-tracking --disable-silent-rules --disable-ccmakedep --libdir=\${exec_prefix}/lib "CFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall" "CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=2" "CXXFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security" "FCFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" "FFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" "GCJFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong" "LDFLAGS=-Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax" "OBJCFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security" "OBJCXXFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security"
+configure: WARNING: unrecognized options: --disable-ccmakedep
+dh_auto_configure -Dutil-macros -Butil-macros-build -- \
+	--disable-silent-rules \
+	--disable-ccmakedep \
+	--libdir=\${exec_prefix}/lib \
+	CFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall" CPPFLAGS="-Wdate-time -D_FORTIFY_SOURCE=2" CXXFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security" FCFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" FFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" GCJFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong" LDFLAGS="-Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax" OBJCFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security" OBJCXXFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security" 
+	cd makedepend-build && ../makedepend/configure --build=x86_64-linux-gnu --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir=\${prefix}/lib/x86_64-linux-gnu --libexecdir=\${prefix}/lib/x86_64-linux-gnu --disable-maintainer-mode --disable-dependency-tracking --disable-silent-rules --disable-ccmakedep --libdir=\${exec_prefix}/lib "CFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall" "CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=2" "CXXFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security" "FCFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" "FFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" "GCJFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong" "LDFLAGS=-Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax" "OBJCFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security" "OBJCXXFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security"
+configure: loading site script /usr/share/config.site
+Intel(R) Parallel Studio XE 2019 Update 1 for Linux*
+Copyright (C) 2009-2018 Intel Corporation. All rights reserved.
+checking for a BSD-compatible install... /usr/bin/install
+checking whether build environment is sane... yes
+dh_auto_configure -Dxorg-cf-files -Bxorg-cf-files-build -- \
+	--disable-silent-rules \
+	--disable-ccmakedep \
+	--libdir=\${exec_prefix}/lib \
+	CFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall" CPPFLAGS="-Wdate-time -D_FORTIFY_SOURCE=2" CXXFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security" FCFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" FFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" GCJFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong" LDFLAGS="-Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax" OBJCFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security" OBJCXXFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security" 
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... /usr/bin/gawk
+checking whether make sets $(MAKE)... 	cd util-macros-build && ../util-macros/configure --build=x86_64-linux-gnu --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir=\${prefix}/lib/x86_64-linux-gnu --libexecdir=\${prefix}/lib/x86_64-linux-gnu --disable-maintainer-mode --disable-dependency-tracking --disable-silent-rules --disable-ccmakedep --libdir=\${exec_prefix}/lib "CFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall" "CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=2" "CXXFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security" "FCFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" "FFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" "GCJFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong" "LDFLAGS=-Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax" "OBJCFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security" "OBJCXXFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security"
+yes
+checking whether make supports nested variables... yes
+configure: loading site script /usr/share/config.site
+Intel(R) Parallel Studio XE 2019 Update 1 for Linux*
+Copyright (C) 2009-2018 Intel Corporation. All rights reserved.
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for style of include used by make... GNU
+checking for gcc... ccache icc
+configure: WARNING: unrecognized options: --disable-ccmakedep
+checking for a BSD-compatible install... /usr/bin/install
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... /usr/bin/gawk
+checking whether make sets $(MAKE)... 	cd xorg-cf-files-build && ../xorg-cf-files/configure --build=x86_64-linux-gnu --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir=\${prefix}/lib/x86_64-linux-gnu --libexecdir=\${prefix}/lib/x86_64-linux-gnu --disable-maintainer-mode --disable-dependency-tracking --disable-silent-rules --disable-ccmakedep --libdir=\${exec_prefix}/lib "CFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall" "CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=2" "CXXFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security" "FCFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" "FFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -march=native -pipe -fstack-security-check" "GCJFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong" "LDFLAGS=-Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax" "OBJCFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security" "OBJCXXFLAGS=-g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -fstack-protector-strong -Wformat -Werror=format-security"
+yes
+configure: loading site script /usr/share/config.site
+Intel(R) Parallel Studio XE 2019 Update 1 for Linux*
+Copyright (C) 2009-2018 Intel Corporation. All rights reserved.
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking whether make supports the include directive... configure: WARNING: unrecognized options: --disable-maintainer-mode, --disable-ccmakedep
+yes (GNU style)
+checking for gcc... ccache icc
+checking for gcc... ccache icc
+configure: loading site script /usr/share/config.site
+Intel(R) Parallel Studio XE 2019 Update 1 for Linux*
+Copyright (C) 2009-2018 Intel Corporation. All rights reserved.
+configure: WARNING: unrecognized options: --disable-maintainer-mode, --disable-dependency-tracking, --disable-ccmakedep
+checking for a BSD-compatible install... /usr/bin/install
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... /usr/bin/gawk
+checking whether make sets $(MAKE)... configure: loading site script /usr/share/config.site
+yes
+Intel(R) Parallel Studio XE 2019 Update 1 for Linux*
+Copyright (C) 2009-2018 Intel Corporation. All rights reserved.
+checking whether make supports nested variables... yes
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... ccache icc
+configure: WARNING: unrecognized options: --disable-maintainer-mode, --disable-ccmakedep
+checking for a BSD-compatible install... /usr/bin/install
+checking whether build environment is sane... checking whether the C compiler works... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... /usr/bin/gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+configure: loading site script /usr/share/config.site
+Intel(R) Parallel Studio XE 2019 Update 1 for Linux*
+Copyright (C) 2009-2018 Intel Corporation. All rights reserved.
+checking that generated files are newer than configure... checking whether the C compiler works... checking for a BSD-compatible install... /usr/bin/install
+checking whether build environment is sane... yes
+checking whether the C compiler works... checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... /usr/bin/gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... ccache icc
+yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... checking whether the C compiler works... 
+yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... checking whether we are cross compiling... 
+checking whether we are cross compiling... done
+configure: creating ./config.status
+no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether ccache icc accepts -g... yes
+checking for C compiler default output file name... a.out
+
+checking for suffix of executables... config.status: creating xorg-macros.pc
+checking whether we are cross compiling... yes
+checking for ccache icc option to accept ISO C89... no
+checking for suffix of object files... config.status: creating Makefile
+none needed
+checking whether ccache icc understands -c and -o together... o
+checking whether we are using the GNU C compiler... yes
+checking dependency style of ccache icc... none
+checking for ccache icc option to accept ISO C99... config.status: creating xorg-macros.m4
+no
+checking for suffix of object files... yes
+checking whether ccache icc accepts -g... o
+checking whether we are using the GNU C compiler... none needed
+checking how to run the C preprocessor... ccache icc -E
+configure: WARNING: unrecognized options: --disable-maintainer-mode, --disable-dependency-tracking, --disable-ccmakedep
+yes
+checking whether ccache icc accepts -g... yes
+checking for ccache icc option to accept ISO C89... none needed
+checking whether ccache icc understands -c and -o together... yes
+checking for ccache icc option to accept ISO C89... yes
+checking dependency style of ccache icc... none
+checking for ccache icc option to accept ISO C99... none needed
+checking whether ccache icc understands -c and -o together... none needed
+checking how to run the C preprocessor... ccache icc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... yes
+checking how to run the C preprocessor... ccache icc -E
+/bin/grep -E
+checking for ANSI C header files... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether ccache icc accepts -g... checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for ccache icc option to accept ISO C89... none needed
+checking whether ccache icc understands -c and -o together... no
+checking for suffix of object files... yes
+checking dependency style of ccache icc... none
+checking for ccache icc option to accept ISO C99... o
+checking whether we are using the GNU C compiler... none needed
+checking how to run the C preprocessor... ccache icc -E
+yes
+checking whether ccache icc accepts -g... yes
+checking for ccache icc option to accept ISO C89... none needed
+checking whether ccache icc understands -c and -o together... yes
+checking for sys/types.h... yes
+checking dependency style of ccache icc... none
+checking for ccache icc option to accept ISO C99... yes
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... none needed
+checking how to run the C preprocessor... ccache icc -E
+/bin/grep -E
+checking for ANSI C header files... checking for sys/stat.h... yes
+checking for stdlib.h... yes
+yes
+checking for string.h... checking for sys/types.h... yes
+checking for sys/types.h... yes
+yes
+yes
+checking for memory.h... checking for sys/stat.h... checking for sys/stat.h... checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+yes
+yes
+checking for strings.h... checking for stdlib.h... checking for stdlib.h... yes
+yes
+yes
+checking for inttypes.h... checking for string.h... checking for string.h... yes
+yes
+yes
+checking for stdint.h... checking for memory.h... checking for memory.h... yes
+yes
+yes
+checking for unistd.h... checking for strings.h... checking for strings.h... yes
+yes
+yes
+checking for inttypes.h... checking whether __clang__ is declared... checking for inttypes.h... yes
+yes
+checking for stdint.h... checking for stdint.h... yes
+yes
+checking for unistd.h... checking for unistd.h... yes
+yes
+checking minix/config.h usability... checking whether __clang__ is declared... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... no
+yes
+checking whether __INTEL_COMPILER is declared... checking for stdlib.h... yes
+checking whether __SUNPRO_C is declared... yes
+checking for string.h... yes
+checking for sys/types.h... yes
+no
+checking minix/config.h presence... yes
+checking for memory.h... checking for sys/stat.h... no
+yes
+checking whether __INTEL_COMPILER is declared... yes
+checking for strings.h... checking for stdlib.h... yes
+no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... checking whether __SUNPRO_C is declared... yes
+yes
+checking for inttypes.h... yes
+checking for a BSD-compatible install... /usr/bin/install
+checking whether build environment is sane... checking for string.h... yes
+yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... /usr/bin/gawk
+checking whether make sets $(MAKE)... yes
+checking for stdint.h... yes
+checking for memory.h... checking whether make supports the include directive... yes
+yes
+yes (GNU style)
+checking whether make supports nested variables... yes
+checking for unistd.h... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking dependency style of ccache icc... checking for strings.h... none
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for ccache icc option to accept ISO C99... yes
+yes
+checking build system type... none needed
+checking whether __clang__ is declared... checking for inttypes.h... checking whether __clang__ is declared... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for a sed that does not truncate output... /bin/sed
+yes
+checking if ccache icc supports -Werror=unknown-warning-option... checking for stdint.h... yes
+checking if ccache icc supports -Werror=unused-command-line-argument... yes
+no
+yes
+checking if ccache icc supports -Wall... checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for unistd.h... checking build system type... yes
+checking whether __clang__ is declared... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for a sed that does not truncate output... /bin/sed
+checking if ccache icc supports -Werror=unknown-warning-option... yes
+checking if ccache icc supports -Werror=unused-command-line-argument... yes
+checking if ccache icc supports -Wall... no
+no
+checking whether __INTEL_COMPILER is declared... checking whether __INTEL_COMPILER is declared... yes
+checking whether __SUNPRO_C is declared... yes
+checking whether __SUNPRO_C is declared... no
+checking whether __INTEL_COMPILER is declared... yes
+checking if ccache icc supports -Wpointer-arith... yes
+checking whether __SUNPRO_C is declared... yes
+checking if ccache icc supports -Wpointer-arith... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking build system type... checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for a sed that does not truncate output... /bin/sed
+checking if ccache icc supports -Werror=unknown-warning-option... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for a sed that does not truncate output... /bin/sed
+yes
+checking if ccache icc supports -Werror=unknown-warning-option... checking if ccache icc supports -Werror=unused-command-line-argument... yes
+checking if ccache icc supports -Werror=unused-command-line-argument... yes
+checking if ccache icc supports -Wall... yes
+checking if ccache icc supports -Wall... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+yes
+checking if ccache icc supports -Wmissing-declarations... checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for a sed that does not truncate output... /bin/sed
+checking if ccache icc supports -Werror=unknown-warning-option... yes
+checking if ccache icc supports -Werror=unused-command-line-argument... yes
+checking if ccache icc supports -Wall... yes
+checking if ccache icc supports -Wmissing-declarations... yes
+checking if ccache icc supports -Wpointer-arith... yes
+checking if ccache icc supports -Wpointer-arith... yes
+checking if ccache icc supports -Wformat=2... yes
+checking if ccache icc supports -Wpointer-arith... yes
+checking if ccache icc supports -Wformat=2... yes
+checking if ccache icc supports -Wmissing-declarations... yes
+checking if ccache icc supports -Wmissing-declarations... yes
+checking if ccache icc supports -Wstrict-prototypes... yes
+checking if ccache icc supports -Wmissing-declarations... yes
+checking if ccache icc supports -Wstrict-prototypes... yes
+checking if ccache icc supports -Wformat=2... yes
+checking if ccache icc supports -Wformat=2... yes
+checking if ccache icc supports -Wmissing-prototypes... yes
+checking if ccache icc supports -Wformat=2... yes
+checking if ccache icc supports -Wmissing-prototypes... yes
+checking if ccache icc supports -Wstrict-prototypes... yes
+checking if ccache icc supports -Wstrict-prototypes... yes
+checking if ccache icc supports -Wnested-externs... yes
+checking if ccache icc supports -Wstrict-prototypes... yes
+checking if ccache icc supports -Wnested-externs... yes
+checking if ccache icc supports -Wmissing-prototypes... yes
+checking if ccache icc supports -Wmissing-prototypes... yes
+checking if ccache icc supports -Wbad-function-cast... yes
+checking if ccache icc supports -Wmissing-prototypes... yes
+checking if ccache icc supports -Wbad-function-cast... yes
+checking if ccache icc supports -Wnested-externs... yes
+checking if ccache icc supports -Wold-style-definition... yes
+checking if ccache icc supports -Wnested-externs... yes
+checking if ccache icc supports -Wnested-externs... yes
+checking if ccache icc supports -Wold-style-definition... yes
+checking if ccache icc supports -Wbad-function-cast... yes
+checking if ccache icc supports -Wdeclaration-after-statement... yes
+checking if ccache icc supports -Wbad-function-cast... yes
+checking if ccache icc supports -Wbad-function-cast... yes
+checking if ccache icc supports -Wdeclaration-after-statement... yes
+checking if ccache icc supports -Wold-style-definition... yes
+checking if ccache icc supports -Wunused... yes
+checking if ccache icc supports -Wold-style-definition... yes
+checking if ccache icc supports -Wold-style-definition... yes
+checking if ccache icc supports -Wunused... yes
+checking if ccache icc supports -Wuninitialized... yes
+checking if ccache icc supports -Wdeclaration-after-statement... yes
+checking if ccache icc supports -Wdeclaration-after-statement... yes
+checking if ccache icc supports -Wdeclaration-after-statement... yes
+checking if ccache icc supports -Wuninitialized... yes
+checking if ccache icc supports -Wshadow... yes
+checking if ccache icc supports -Wunused... yes
+checking if ccache icc supports -Wunused... yes
+checking if ccache icc supports -Wunused... yes
+checking if ccache icc supports -Wshadow... yes
+checking if ccache icc supports -Wmissing-noreturn... yes
+checking if ccache icc supports -Wuninitialized... yes
+checking if ccache icc supports -Wuninitialized... yes
+checking if ccache icc supports -Wuninitialized... yes
+checking if ccache icc supports -Wmissing-noreturn... yes
+checking if ccache icc supports -Wmissing-format-attribute... yes
+checking if ccache icc supports -Wshadow... yes
+checking if ccache icc supports -Wshadow... yes
+checking if ccache icc supports -Wshadow... yes
+checking if ccache icc supports -Wmissing-format-attribute... yes
+checking if ccache icc supports -Wmissing-noreturn... yes
+checking if ccache icc supports -Wmissing-noreturn... yes
+checking if ccache icc supports -Wredundant-decls... yes
+checking if ccache icc supports -Wmissing-noreturn... yes
+checking if ccache icc supports -Wredundant-decls... yes
+checking if ccache icc supports -Wmissing-format-attribute... yes
+yes
+checking if ccache icc supports -Wmissing-format-attribute... checking if ccache icc supports -Werror=implicit... yes
+checking if ccache icc supports -Wmissing-format-attribute... yes
+checking if ccache icc supports -Wlogical-op... yes
+checking if ccache icc supports -Wredundant-decls... yes
+checking if ccache icc supports -Wredundant-decls... yes
+checking if ccache icc supports -Werror=nonnull... yes
+checking if ccache icc supports -Wredundant-decls... yes
+checking if ccache icc supports -Werror=implicit... yes
+checking if ccache icc supports -Wlogical-op... yes
+checking if ccache icc supports -Wlogical-op... yes
+checking if ccache icc supports -Werror=init-self... yes
+checking if ccache icc supports -Wlogical-op... yes
+checking if ccache icc supports -Werror=nonnull... yes
+yes
+checking if ccache icc supports -Werror=implicit... checking if ccache icc supports -Werror=implicit... yes
+checking if ccache icc supports -Werror=main... yes
+checking if ccache icc supports -Werror=implicit... yes
+checking if ccache icc supports -Werror=init-self... yes
+checking if ccache icc supports -Werror=nonnull... yes
+checking if ccache icc supports -Werror=nonnull... yes
+checking if ccache icc supports -Werror=missing-braces... yes
+checking if ccache icc supports -Werror=nonnull... yes
+checking if ccache icc supports -Werror=main... yes
+checking if ccache icc supports -Werror=init-self... yes
+checking if ccache icc supports -Werror=init-self... yes
+checking if ccache icc supports -Werror=sequence-point... yes
+checking if ccache icc supports -Werror=init-self... yes
+checking if ccache icc supports -Werror=missing-braces... yes
+checking if ccache icc supports -Werror=main... yes
+checking if ccache icc supports -Werror=main... yes
+checking if ccache icc supports -Werror=return-type... yes
+checking if ccache icc supports -Werror=main... yes
+checking if ccache icc supports -Werror=sequence-point... yes
+checking if ccache icc supports -Werror=missing-braces... yes
+checking if ccache icc supports -Werror=missing-braces... yes
+checking if ccache icc supports -Werror=trigraphs... yes
+checking if ccache icc supports -Werror=missing-braces... yes
+checking if ccache icc supports -Werror=return-type... yes
+checking if ccache icc supports -Werror=sequence-point... yes
+checking if ccache icc supports -Werror=sequence-point... yes
+checking if ccache icc supports -Werror=array-bounds... yes
+checking if ccache icc supports -Werror=sequence-point... yes
+checking if ccache icc supports -Werror=trigraphs... yes
+checking if ccache icc supports -Werror=return-type... yes
+checking if ccache icc supports -Werror=return-type... yes
+checking if ccache icc supports -Werror=write-strings... yes
+checking if ccache icc supports -Werror=return-type... yes
+checking if ccache icc supports -Werror=array-bounds... yes
+checking if ccache icc supports -Werror=trigraphs... yes
+checking if ccache icc supports -Werror=trigraphs... yes
+checking if ccache icc supports -Werror=address... yes
+checking if ccache icc supports -Werror=trigraphs... yes
+checking if ccache icc supports -Werror=write-strings... yes
+checking if ccache icc supports -Werror=array-bounds... yes
+checking if ccache icc supports -Werror=array-bounds... yes
+checking if ccache icc supports -Werror=int-to-pointer-cast... yes
+checking if ccache icc supports -Werror=array-bounds... yes
+checking if ccache icc supports -Werror=address... yes
+checking if ccache icc supports -Werror=write-strings... yes
+checking if ccache icc supports -Werror=write-strings... yes
+checking if ccache icc supports -Werror=pointer-to-int-cast... yes
+checking if ccache icc supports -Werror=write-strings... yes
+checking if ccache icc supports -Werror=int-to-pointer-cast... yes
+checking if ccache icc supports -Werror=address... yes
+checking if ccache icc supports -Werror=address... yes
+checking if ccache icc supports -pedantic... yes
+checking if ccache icc supports -Werror=address... yes
+checking if ccache icc supports -Werror=pointer-to-int-cast... yes
+checking if ccache icc supports -Werror=int-to-pointer-cast... yes
+checking if ccache icc supports -Werror=int-to-pointer-cast... yes
+checking if ccache icc supports -Werror... yes
+checking if ccache icc supports -Werror=int-to-pointer-cast... yes
+checking if ccache icc supports -pedantic... yes
+checking if ccache icc supports -Werror=pointer-to-int-cast... yes
+checking if ccache icc supports -Werror=pointer-to-int-cast... yes
+checking if ccache icc supports -Werror=attributes... yes
+checking if ccache icc supports -Werror=pointer-to-int-cast... yes
+checking if ccache icc supports -Werror... yes
+checking if ccache icc supports -pedantic... yes
+checking if ccache icc supports -pedantic... yes
+checking whether make supports nested variables... (cached) yes
+yes
+checking if ccache icc supports -pedantic... checking that generated files are newer than configure... done
+configure: creating ./config.status
+yes
+checking if ccache icc supports -Werror=attributes... yes
+checking if ccache icc supports -Werror... yes
+checking if ccache icc supports -Werror... config.status: creating Makefile
+config.status: creating gccmakedep
+config.status: executing depfiles commands
+yes
+checking if ccache icc supports -Werror... configure: WARNING: unrecognized options: --disable-ccmakedep
+yes
+checking whether make supports nested variables... (cached) yes
+checking how to run the C preprocessor... ccache icc -E
+yes
+checking if ccache icc supports -Werror=attributes... yes
+checking if ccache icc supports -Werror=attributes... checking for cpp... /usr/bin/cpp
+checking if /usr/bin/cpp requires -undef... yes
+checking if /usr/bin/cpp requires -traditional... yes
+checking if ccache icc supports -Werror=attributes... yes
+checking for mkstemp... yes
+yes
+checking whether make supports nested variables... (cached) yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... checking whether make supports nested variables... (cached) yes
+checking for rename... no
+checking for XPROTO... yes
+yes
+yes
+checking for perl... yes
+checking for XPROTO... checking whether make supports nested variables... (cached) yes
+checking for root directory for font files... /usr/share/fonts/X11
+checking for directory for encodings files... ${FONTROOTDIR}/encodings
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+yes
+config.status: creating Makefile
+checking for fchmod... config.status: creating config.h
+config.status: creating Makefile
+config.status: executing depfiles commands
+configure: WARNING: unrecognized options: --disable-ccmakedep
+config.status: creating site.def
+config.status: creating Makefile
+config.status: executing depfiles commands
+configure: WARNING: unrecognized options: --disable-maintainer-mode, --disable-ccmakedep
+config.status: creating config.h
+config.status: executing depfiles commands
+yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for X... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating makedepend-config.h
+config.status: executing depfiles commands
+configure: WARNING: unrecognized options: --disable-maintainer-mode, --disable-ccmakedep
+dh override_dh_auto_configure --with quilt,autotools-dev --parallel
+make[1]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev'
+   debian/rules override_dh_auto_build
+make[1]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev'
+dh_auto_build -Dgccmakedep -Bgccmakedep-build
+dh_auto_build -Dimake -Bimake-build
+dh_auto_build -Dlndir -Blndir-build
+dh_auto_build -Dmakedepend -Bmakedepend-build
+dh_auto_build -Dutil-macros -Butil-macros-build
+dh_auto_build -Dxorg-cf-files -Bxorg-cf-files-build
+	cd imake-build && make -j8
+	cd makedepend-build && make -j8
+	cd gccmakedep-build && make -j8
+	cd util-macros-build && make -j8
+	cd lndir-build && make -j8
+	cd xorg-cf-files-build && make -j8
+make[2]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/imake-build'
+make[2]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/makedepend-build'
+make[2]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/gccmakedep-build'
+/bin/sed -e 's|__vendorversion__|"gccmakedep 1.0.3" "X Version 11"|' 	-e 's|__xorgversion__|"gccmakedep 1.0.3" "X Version 11"|' 	-e 's|__xservername__|Xorg|g' 	-e 's|__xconfigfile__|xorg.conf|g' 	-e 's|__projectroot__|/usr|g' 	-e 's|__apploaddir__||g' 	-e 's|__appmansuffix__|1|g' 	-e 's|__drivermansuffix__|4|g' 	-e 's|__adminmansuffix__|8|g' 	-e 's|__libmansuffix__|3|g' 	-e 's|__miscmansuffix__|7|g' 	-e 's|__filemansuffix__|5|g' < ../gccmakedep/gccmakedep.man > gccmakedep.1
+make[2]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/lndir-build'
+make[2]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/util-macros-build'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/util-macros-build'
+make[2]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/xorg-cf-files-build'
+make  all-am
+make  all-am
+make  all-am
+make[2]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/gccmakedep-build'
+make[2]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/xorg-cf-files-build'
+make[3]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/imake-build'
+ccache icc -DHAVE_CONFIG_H -I. -I../imake   -Wdate-time -D_FORTIFY_SOURCE=2  -DCPP_PROGRAM='"/usr/bin/cpp"' -Wall -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wold-style-definition -Wdeclaration-after-statement -Wunused -Wuninitialized -Wshadow -Wmissing-noreturn -Wmissing-format-attribute -Wredundant-decls -Wlogical-op -Werror=implicit -Werror=nonnull -Werror=init-self -Werror=main -Werror=missing-braces -Werror=sequence-point -Werror=return-type -Werror=trigraphs -Werror=array-bounds -Werror=write-strings -Werror=address -Werror=int-to-pointer-cast -Werror=pointer-to-int-cast -fno-strict-aliasing -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall -c -o imake-imake.o `test -f 'imake.c' || echo '../imake/'`imake.c
+make[3]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/makedepend-build'
+ccache icc -DHAVE_CONFIG_H -I. -I../makedepend  -DOBJSUFFIX=\".o\" -DINCLUDEDIR=\"/usr/include\"  -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wold-style-definition -Wdeclaration-after-statement -Wunused -Wuninitialized -Wshadow -Wmissing-noreturn -Wmissing-format-attribute -Wredundant-decls -Wlogical-op -Werror=implicit -Werror=nonnull -Werror=init-self -Werror=main -Werror=missing-braces -Werror=sequence-point -Werror=return-type -Werror=trigraphs -Werror=array-bounds -Werror=write-strings -Werror=address -Werror=int-to-pointer-cast -Werror=pointer-to-int-cast -fno-strict-aliasing -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall -c -o include.o ../makedepend/include.c
+ccache icc -DHAVE_CONFIG_H -I. -I../imake   -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wold-style-definition -Wdeclaration-after-statement -Wunused -Wuninitialized -Wshadow -Wmissing-noreturn -Wmissing-format-attribute -Wredundant-decls -Wlogical-op -Werror=implicit -Werror=nonnull -Werror=init-self -Werror=main -Werror=missing-braces -Werror=sequence-point -Werror=return-type -Werror=trigraphs -Werror=array-bounds -Werror=write-strings -Werror=address -Werror=int-to-pointer-cast -Werror=pointer-to-int-cast -fno-strict-aliasing -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall -c -o revpath.o ../imake/revpath.c
+ccache icc -DHAVE_CONFIG_H -I. -I../makedepend  -DOBJSUFFIX=\".o\" -DINCLUDEDIR=\"/usr/include\"  -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wold-style-definition -Wdeclaration-after-statement -Wunused -Wuninitialized -Wshadow -Wmissing-noreturn -Wmissing-format-attribute -Wredundant-decls -Wlogical-op -Werror=implicit -Werror=nonnull -Werror=init-self -Werror=main -Werror=missing-braces -Werror=sequence-point -Werror=return-type -Werror=trigraphs -Werror=array-bounds -Werror=write-strings -Werror=address -Werror=int-to-pointer-cast -Werror=pointer-to-int-cast -fno-strict-aliasing -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall -c -o main.o ../makedepend/main.c
+/usr/bin/cpp -undef -traditional -DCONFIGDIRSPEC='"-I/usr/lib/X11/config"' ../imake/xmkmf.cpp | /bin/sed -e /^\#/d | /bin/sed -e s/XCOMM/\#/ > xmkmf
+ccache icc -DHAVE_CONFIG_H -I. -I../makedepend  -DOBJSUFFIX=\".o\" -DINCLUDEDIR=\"/usr/include\"  -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wold-style-definition -Wdeclaration-after-statement -Wunused -Wuninitialized -Wshadow -Wmissing-noreturn -Wmissing-format-attribute -Wredundant-decls -Wlogical-op -Werror=implicit -Werror=nonnull -Werror=init-self -Werror=main -Werror=missing-braces -Werror=sequence-point -Werror=return-type -Werror=trigraphs -Werror=array-bounds -Werror=write-strings -Werror=address -Werror=int-to-pointer-cast -Werror=pointer-to-int-cast -fno-strict-aliasing -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall -c -o parse.o ../makedepend/parse.c
+ccache icc -DHAVE_CONFIG_H -I. -I../makedepend  -DOBJSUFFIX=\".o\" -DINCLUDEDIR=\"/usr/include\"  -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wold-style-definition -Wdeclaration-after-statement -Wunused -Wuninitialized -Wshadow -Wmissing-noreturn -Wmissing-format-attribute -Wredundant-decls -Wlogical-op -Werror=implicit -Werror=nonnull -Werror=init-self -Werror=main -Werror=missing-braces -Werror=sequence-point -Werror=return-type -Werror=trigraphs -Werror=array-bounds -Werror=write-strings -Werror=address -Werror=int-to-pointer-cast -Werror=pointer-to-int-cast -fno-strict-aliasing -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall -c -o pr.o ../makedepend/pr.c
+make[3]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/lndir-build'
+ccache icc -DHAVE_CONFIG_H -I. -I../lndir   -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wold-style-definition -Wdeclaration-after-statement -Wunused -Wuninitialized -Wshadow -Wmissing-noreturn -Wmissing-format-attribute -Wredundant-decls -Wlogical-op -Werror=implicit -Werror=nonnull -Werror=init-self -Werror=main -Werror=missing-braces -Werror=sequence-point -Werror=return-type -Werror=trigraphs -Werror=array-bounds -Werror=write-strings -Werror=address -Werror=int-to-pointer-cast -Werror=pointer-to-int-cast -fno-strict-aliasing  -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall -c -o lndir.o ../lndir/lndir.c
+ccache icc -DHAVE_CONFIG_H -I. -I../makedepend  -DOBJSUFFIX=\".o\" -DINCLUDEDIR=\"/usr/include\"  -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wold-style-definition -Wdeclaration-after-statement -Wunused -Wuninitialized -Wshadow -Wmissing-noreturn -Wmissing-format-attribute -Wredundant-decls -Wlogical-op -Werror=implicit -Werror=nonnull -Werror=init-self -Werror=main -Werror=missing-braces -Werror=sequence-point -Werror=return-type -Werror=trigraphs -Werror=array-bounds -Werror=write-strings -Werror=address -Werror=int-to-pointer-cast -Werror=pointer-to-int-cast -fno-strict-aliasing -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall -c -o cppsetup.o ../makedepend/cppsetup.c
+/usr/bin/cpp -undef -traditional -DARCMD="ar clq" -DRANLIB="ranlib" ../imake/mergelib.cpp | /bin/sed -e /^\#/d | /bin/sed -e s/XCOMM/\#/ > mergelib
+ccache icc -DHAVE_CONFIG_H -I. -I../makedepend  -DOBJSUFFIX=\".o\" -DINCLUDEDIR=\"/usr/include\"  -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wold-style-definition -Wdeclaration-after-statement -Wunused -Wuninitialized -Wshadow -Wmissing-noreturn -Wmissing-format-attribute -Wredundant-decls -Wlogical-op -Werror=implicit -Werror=nonnull -Werror=init-self -Werror=main -Werror=missing-braces -Werror=sequence-point -Werror=return-type -Werror=trigraphs -Werror=array-bounds -Werror=write-strings -Werror=address -Werror=int-to-pointer-cast -Werror=pointer-to-int-cast -fno-strict-aliasing -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall -c -o ifparser.o ../makedepend/ifparser.c
+cp ../imake/mkhtmlindex.pl mkhtmlindex
+/bin/sed -e 's|__vendorversion__|"imake 1.0.7" "X Version 11"|' 	-e 's|__xorgversion__|"imake 1.0.7" "X Version 11"|' 	-e 's|__xservername__|Xorg|g' 	-e 's|__xconfigfile__|xorg.conf|g' 	-e 's|__projectroot__|/usr|g' 	-e 's|__apploaddir__||g' 	-e 's|__appmansuffix__|1|g' 	-e 's|__drivermansuffix__|4|g' 	-e 's|__adminmansuffix__|8|g' 	-e 's|__libmansuffix__|3|g' 	-e 's|__miscmansuffix__|7|g' 	-e 's|__filemansuffix__|5|g' -e 's|__cpp__|/usr/bin/cpp|g' < ../imake/imake.man > imake.1
+/bin/sed -e 's|__vendorversion__|"makedepend 1.0.5" "X Version 11"|' 	-e 's|__xorgversion__|"makedepend 1.0.5" "X Version 11"|' 	-e 's|__xservername__|Xorg|g' 	-e 's|__xconfigfile__|xorg.conf|g' 	-e 's|__projectroot__|/usr|g' 	-e 's|__apploaddir__||g' 	-e 's|__appmansuffix__|1|g' 	-e 's|__drivermansuffix__|4|g' 	-e 's|__adminmansuffix__|8|g' 	-e 's|__libmansuffix__|3|g' 	-e 's|__miscmansuffix__|7|g' 	-e 's|__filemansuffix__|5|g' -e 's|__cpp__||g' < ../makedepend/makedepend.man > makedepend.1
+/bin/sed -e 's|__vendorversion__|"lndir 1.0.3" "X Version 11"|' 	-e 's|__xorgversion__|"lndir 1.0.3" "X Version 11"|' 	-e 's|__xservername__|Xorg|g' 	-e 's|__xconfigfile__|xorg.conf|g' 	-e 's|__projectroot__|/usr|g' 	-e 's|__apploaddir__||g' 	-e 's|__appmansuffix__|1|g' 	-e 's|__drivermansuffix__|4|g' 	-e 's|__adminmansuffix__|8|g' 	-e 's|__libmansuffix__|3|g' 	-e 's|__miscmansuffix__|7|g' 	-e 's|__filemansuffix__|5|g' < ../lndir/lndir.man > lndir.1
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=.'
+../imake/imake.c(662): warning #3280: declaration hides variable "Imakefile" (declared at line 319)
+  FindImakefile(const char *Imakefile)
+                            ^
+
+../imake/imake.c(806): warning #167: argument of type "const char **" is incompatible with parameter of type "char *const *"
+  		execvp(cmd, argv);
+  		            ^
+
+../imake/imake.c(1124): warning #2218: result of call is not used
+      (void) fscanf (ldprog, "%d.%d", &ldmajor, &ldminor);
+             ^
+
+../imake/imake.c(1124): warning #2218: result of call is not used
+      (void) fscanf (ldprog, "%d.%d", &ldmajor, &ldminor);
+      ^
+
+../imake/imake.c(1306): warning #869: parameter "name" was never referenced
+  get_gcc_version(FILE *inFile, char *name)
+                                      ^
+
+../imake/imake.c(1636): warning #1599: declaration hides variable "name" (declared at line 1430)
+  	  char name[PATH_MAX];
+  	       ^
+
+../imake/imake.c(1986): warning #2218: result of call is not used
+  		ftruncate(fileno(tmpfd), (off_t) 0);
+  		^
+
+Front end time                       0.12 (CPU)       0.00 (elapsed)
+Back end time                        0.07 (CPU)       0.00 (elapsed)
+Total compilation time               0.19 (CPU)       0.00 (elapsed)
+/bin/sed -e 's|__vendorversion__|"imake 1.0.7" "X Version 11"|' 	-e 's|__xorgversion__|"imake 1.0.7" "X Version 11"|' 	-e 's|__xservername__|Xorg|g' 	-e 's|__xconfigfile__|xorg.conf|g' 	-e 's|__projectroot__|/usr|g' 	-e 's|__apploaddir__||g' 	-e 's|__appmansuffix__|1|g' 	-e 's|__drivermansuffix__|4|g' 	-e 's|__adminmansuffix__|8|g' 	-e 's|__libmansuffix__|3|g' 	-e 's|__miscmansuffix__|7|g' 	-e 's|__filemansuffix__|5|g' -e 's|__cpp__|/usr/bin/cpp|g' < ../imake/revpath.man > revpath.1
+/bin/sed -e 's|__vendorversion__|"imake 1.0.7" "X Version 11"|' 	-e 's|__xorgversion__|"imake 1.0.7" "X Version 11"|' 	-e 's|__xservername__|Xorg|g' 	-e 's|__xconfigfile__|xorg.conf|g' 	-e 's|__projectroot__|/usr|g' 	-e 's|__apploaddir__||g' 	-e 's|__appmansuffix__|1|g' 	-e 's|__drivermansuffix__|4|g' 	-e 's|__adminmansuffix__|8|g' 	-e 's|__libmansuffix__|3|g' 	-e 's|__miscmansuffix__|7|g' 	-e 's|__filemansuffix__|5|g' -e 's|__cpp__|/usr/bin/cpp|g' < ../imake/makeg.man > makeg.1
+/bin/sed -e 's|__vendorversion__|"imake 1.0.7" "X Version 11"|' 	-e 's|__xorgversion__|"imake 1.0.7" "X Version 11"|' 	-e 's|__xservername__|Xorg|g' 	-e 's|__xconfigfile__|xorg.conf|g' 	-e 's|__projectroot__|/usr|g' 	-e 's|__apploaddir__||g' 	-e 's|__appmansuffix__|1|g' 	-e 's|__drivermansuffix__|4|g' 	-e 's|__adminmansuffix__|8|g' 	-e 's|__libmansuffix__|3|g' 	-e 's|__miscmansuffix__|7|g' 	-e 's|__filemansuffix__|5|g' -e 's|__cpp__|/usr/bin/cpp|g' < ../imake/xmkmf.man > xmkmf.1
+/bin/sed -e 's|__vendorversion__|"imake 1.0.7" "X Version 11"|' 	-e 's|__xorgversion__|"imake 1.0.7" "X Version 11"|' 	-e 's|__xservername__|Xorg|g' 	-e 's|__xconfigfile__|xorg.conf|g' 	-e 's|__projectroot__|/usr|g' 	-e 's|__apploaddir__||g' 	-e 's|__appmansuffix__|1|g' 	-e 's|__drivermansuffix__|4|g' 	-e 's|__adminmansuffix__|8|g' 	-e 's|__libmansuffix__|3|g' 	-e 's|__miscmansuffix__|7|g' 	-e 's|__filemansuffix__|5|g' -e 's|__cpp__|/usr/bin/cpp|g' < ../imake/mergelib.man > mergelib.1
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=.'
+Front end time                       0.12 (CPU)       0.00 (elapsed)
+Back end time                        0.04 (CPU)       0.00 (elapsed)
+Total compilation time               0.16 (CPU)       0.00 (elapsed)
+/bin/sed -e 's|__vendorversion__|"imake 1.0.7" "X Version 11"|' 	-e 's|__xorgversion__|"imake 1.0.7" "X Version 11"|' 	-e 's|__xservername__|Xorg|g' 	-e 's|__xconfigfile__|xorg.conf|g' 	-e 's|__projectroot__|/usr|g' 	-e 's|__apploaddir__||g' 	-e 's|__appmansuffix__|1|g' 	-e 's|__drivermansuffix__|4|g' 	-e 's|__adminmansuffix__|8|g' 	-e 's|__libmansuffix__|3|g' 	-e 's|__miscmansuffix__|7|g' 	-e 's|__filemansuffix__|5|g' -e 's|__cpp__|/usr/bin/cpp|g' < ../imake/mkdirhier.man > mkdirhier.1
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=.'
+Front end time                       0.05 (CPU)       0.00 (elapsed)
+Back end time                        0.01 (CPU)       0.00 (elapsed)
+Total compilation time               0.06 (CPU)       0.00 (elapsed)
+/bin/sed -e 's|__vendorversion__|"imake 1.0.7" "X Version 11"|' 	-e 's|__xorgversion__|"imake 1.0.7" "X Version 11"|' 	-e 's|__xservername__|Xorg|g' 	-e 's|__xconfigfile__|xorg.conf|g' 	-e 's|__projectroot__|/usr|g' 	-e 's|__apploaddir__||g' 	-e 's|__appmansuffix__|1|g' 	-e 's|__drivermansuffix__|4|g' 	-e 's|__adminmansuffix__|8|g' 	-e 's|__libmansuffix__|3|g' 	-e 's|__miscmansuffix__|7|g' 	-e 's|__filemansuffix__|5|g' -e 's|__cpp__|/usr/bin/cpp|g' < ../imake/cleanlinks.man > cleanlinks.1
+/bin/sed -e 's|__vendorversion__|"imake 1.0.7" "X Version 11"|' 	-e 's|__xorgversion__|"imake 1.0.7" "X Version 11"|' 	-e 's|__xservername__|Xorg|g' 	-e 's|__xconfigfile__|xorg.conf|g' 	-e 's|__projectroot__|/usr|g' 	-e 's|__apploaddir__||g' 	-e 's|__appmansuffix__|1|g' 	-e 's|__drivermansuffix__|4|g' 	-e 's|__adminmansuffix__|8|g' 	-e 's|__libmansuffix__|3|g' 	-e 's|__miscmansuffix__|7|g' 	-e 's|__filemansuffix__|5|g' -e 's|__cpp__|/usr/bin/cpp|g' < ../imake/mkhtmlindex.man > mkhtmlindex.1
+ccache icc -Wall -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wold-style-definition -Wdeclaration-after-statement -Wunused -Wuninitialized -Wshadow -Wmissing-noreturn -Wmissing-format-attribute -Wredundant-decls -Wlogical-op -Werror=implicit -Werror=nonnull -Werror=init-self -Werror=main -Werror=missing-braces -Werror=sequence-point -Werror=return-type -Werror=trigraphs -Werror=array-bounds -Werror=write-strings -Werror=address -Werror=int-to-pointer-cast -Werror=pointer-to-int-cast -fno-strict-aliasing  -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall  -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -o lndir lndir.o  
+ccache icc  -DCPP_PROGRAM='"/usr/bin/cpp"' -Wall -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wold-style-definition -Wdeclaration-after-statement -Wunused -Wuninitialized -Wshadow -Wmissing-noreturn -Wmissing-format-attribute -Wredundant-decls -Wlogical-op -Werror=implicit -Werror=nonnull -Werror=init-self -Werror=main -Werror=missing-braces -Werror=sequence-point -Werror=return-type -Werror=trigraphs -Werror=array-bounds -Werror=write-strings -Werror=address -Werror=int-to-pointer-cast -Werror=pointer-to-int-cast -fno-strict-aliasing -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall  -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -o imake imake-imake.o  
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=.'
+ccache icc -Wall -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wold-style-definition -Wdeclaration-after-statement -Wunused -Wuninitialized -Wshadow -Wmissing-noreturn -Wmissing-format-attribute -Wredundant-decls -Wlogical-op -Werror=implicit -Werror=nonnull -Werror=init-self -Werror=main -Werror=missing-braces -Werror=sequence-point -Werror=return-type -Werror=trigraphs -Werror=array-bounds -Werror=write-strings -Werror=address -Werror=int-to-pointer-cast -Werror=pointer-to-int-cast -fno-strict-aliasing -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall  -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -o revpath revpath.o  
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=.'
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=.'
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=.'
+../makedepend/ifparser.c(142): warning #869: parameter "g" was never referenced
+  parse_character (IfParser *g, const char *cp, long *valp)
+                             ^
+
+Front end time                       0.07 (CPU)       1.00 (elapsed)
+Back end time                        0.04 (CPU)       0.00 (elapsed)
+Total compilation time               0.11 (CPU)       1.00 (elapsed)
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=.'
+Front end time                       0.09 (CPU)       1.00 (elapsed)
+Back end time                        0.03 (CPU)       0.00 (elapsed)
+Total compilation time               0.12 (CPU)       1.00 (elapsed)
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=.'
+../makedepend/parse.c(546): warning #3280: declaration hides variable "inclistp" (declared at line 180 of "../makedepend/def.h")
+  	struct inclist	*inclistp;
+  	              	 ^
+
+Front end time                       0.10 (CPU)       1.00 (elapsed)
+Back end time                        0.04 (CPU)       0.00 (elapsed)
+Total compilation time               0.14 (CPU)       1.00 (elapsed)
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=.'
+../makedepend/main.c(584): warning #593: variable "whitespace" was set but never used
+  	boolean whitespace = FALSE;
+  	        ^
+
+Front end time                       0.11 (CPU)       1.00 (elapsed)
+Back end time                        0.05 (CPU)       0.00 (elapsed)
+Total compilation time               0.16 (CPU)       1.00 (elapsed)
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=.'
+Front end time                       0.09 (CPU)       1.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.11 (CPU)       1.00 (elapsed)
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=.'
+Front end time                       0.09 (CPU)       1.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.11 (CPU)       1.00 (elapsed)
+ccache icc -Wall -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wold-style-definition -Wdeclaration-after-statement -Wunused -Wuninitialized -Wshadow -Wmissing-noreturn -Wmissing-format-attribute -Wredundant-decls -Wlogical-op -Werror=implicit -Werror=nonnull -Werror=init-self -Werror=main -Werror=missing-braces -Werror=sequence-point -Werror=return-type -Werror=trigraphs -Werror=array-bounds -Werror=write-strings -Werror=address -Werror=int-to-pointer-cast -Werror=pointer-to-int-cast -fno-strict-aliasing -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wall  -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -o makedepend include.o main.o parse.o pr.o cppsetup.o ifparser.o  
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev=.'
+ipo: warning #11021: unresolved __open_missing_mode
+        Referenced in /tmp/ipo_iccHeiBPT.o
+ipo: warning #11021: unresolved __open_too_many_args
+        Referenced in /tmp/ipo_iccHeiBPT.o
+make[3]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/lndir-build'
+make[2]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/lndir-build'
+make[3]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/imake-build'
+make[2]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/imake-build'
+make[3]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/makedepend-build'
+make[2]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/makedepend-build'
+dh override_dh_auto_build --with quilt,autotools-dev --parallel
+make[1]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev'
+   debian/rules override_dh_auto_test
+make[1]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev'
+dh_auto_test -Dgccmakedep -Bgccmakedep-build
+dh_auto_test -Dimake -Bimake-build
+dh_auto_test -Dlndir -Blndir-build
+dh_auto_test -Dmakedepend -Bmakedepend-build
+dh_auto_test -Dutil-macros -Butil-macros-build
+dh_auto_test -Dxorg-cf-files -Bxorg-cf-files-build
+dh override_dh_auto_test --with quilt,autotools-dev --parallel
+make[1]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev'
+ fakeroot debian/rules binary
+dh binary --with quilt,autotools-dev --parallel
+dh: The autotools-dev sequence is deprecated and replaced by dh in debhelper (>= 9.20160115)
+dh: This feature will be removed in compat 12.
+   dh_testroot -O--parallel
+   dh_prep -O--parallel
+   dh_installdirs -O--parallel
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev'
+set -e; for FILE in gccmakedep imake lndir makedepend util-macros xorg-cf-files; do \
+	/usr/bin/make -C ${FILE}-build DESTDIR=/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp install; \
+done
+make[2]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/gccmakedep-build'
+make[3]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/gccmakedep-build'
+ /bin/mkdir -p '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/bin'
+ /bin/mkdir -p '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/share/man/man1'
+ /usr/bin/install -m 644 gccmakedep.1 '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/share/man/man1'
+ /usr/bin/install gccmakedep '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/bin'
+make[3]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/gccmakedep-build'
+make[2]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/gccmakedep-build'
+make[2]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/imake-build'
+make[3]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/imake-build'
+ /bin/mkdir -p '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/bin'
+ /bin/mkdir -p '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/bin'
+ /bin/mkdir -p '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/share/man/man1'
+  /usr/bin/install imake revpath '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/bin'
+ /usr/bin/install ../imake/makeg xmkmf mergelib ../imake/mkdirhier ../imake/cleanlinks mkhtmlindex '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/bin'
+ /usr/bin/install -m 644 imake.1 revpath.1 makeg.1 xmkmf.1 mergelib.1 mkdirhier.1 cleanlinks.1 mkhtmlindex.1 '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/share/man/man1'
+make[3]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/imake-build'
+make[2]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/imake-build'
+make[2]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/lndir-build'
+make[3]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/lndir-build'
+ /bin/mkdir -p '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/bin'
+ /bin/mkdir -p '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/share/man/man1'
+ /usr/bin/install -m 644 lndir.1 '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/share/man/man1'
+  /usr/bin/install lndir '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/bin'
+make[3]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/lndir-build'
+make[2]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/lndir-build'
+make[2]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/makedepend-build'
+make[3]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/makedepend-build'
+ /bin/mkdir -p '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/bin'
+ /bin/mkdir -p '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/share/man/man1'
+ /usr/bin/install -m 644 makedepend.1 '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/share/man/man1'
+  /usr/bin/install makedepend '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/bin'
+make[3]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/makedepend-build'
+make[2]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/makedepend-build'
+make[2]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/util-macros-build'
+make[3]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/util-macros-build'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/share/aclocal'
+ /bin/mkdir -p '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/share/util-macros'
+ /bin/mkdir -p '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/share/pkgconfig'
+ /usr/bin/install -m 644 xorg-macros.m4 '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/share/aclocal'
+ /usr/bin/install -m 644 ../util-macros/INSTALL '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/share/util-macros'
+ /usr/bin/install -m 644 xorg-macros.pc '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/share/pkgconfig'
+/usr/bin/make  install-data-hook
+make[4]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/util-macros-build'
+rm -f /dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/share/aclocal/xorgversion.m4
+make[4]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/util-macros-build'
+make[3]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/util-macros-build'
+make[2]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/util-macros-build'
+make[2]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/xorg-cf-files-build'
+make[3]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/xorg-cf-files-build'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/lib/X11/config'
+ /bin/mkdir -p '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/lib/X11/config'
+ /usr/bin/install -m 644 host.def date.def version.def '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/lib/X11/config'
+ /usr/bin/install -m 644 ../xorg-cf-files/Imake.rules ../xorg-cf-files/Motif.rules ../xorg-cf-files/OpenBSDLib.rules ../xorg-cf-files/Win32.rules ../xorg-cf-files/X11.rules ../xorg-cf-files/bsdiLib.rules ../xorg-cf-files/bsdLib.rules ../xorg-cf-files/cde.rules ../xorg-cf-files/cross.rules ../xorg-cf-files/cygwin.rules ../xorg-cf-files/mingw.rules ../xorg-cf-files/darwinLib.rules ../xorg-cf-files/gnuLib.rules ../xorg-cf-files/hpLib.rules ../xorg-cf-files/ibmLib.rules ../xorg-cf-files/lnxLib.rules ../xorg-cf-files/lnxdoc.rules ../xorg-cf-files/necLib.rules ../xorg-cf-files/noop.rules ../xorg-cf-files/nto.rules ../xorg-cf-files/oldlib.rules ../xorg-cf-files/os2.rules ../xorg-cf-files/os2Lib.rules ../xorg-cf-files/osfLib.rules ../xorg-cf-files/scoLib.rules ../xorg-cf-files/sequentLib.rules ../xorg-cf-files/sgiLib.rules ../xorg-cf-files/sunLib.rules ../xorg-cf-files/sv3Lib.rules ../xorg-cf-files/sv4Lib.rules ../xorg-cf-files/QNX4.rules ../xorg-cf-files/xf86.rules ../xorg-cf-files/Imake.tmpl ../xorg-cf-files/Library.tmpl ../xorg-cf-files/Motif.tmpl ../xorg-cf-files/OpenBSDLib.tmpl ../xorg-cf-files/Server.tmpl ../xorg-cf-files/ServerLib.tmpl ../xorg-cf-files/Threads.tmpl ../xorg-cf-files/WinLib.tmpl '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/lib/X11/config'
+ /usr/bin/install -m 644 ../xorg-cf-files/X11.tmpl ../xorg-cf-files/bsdiLib.tmpl ../xorg-cf-files/bsdLib.tmpl ../xorg-cf-files/cde.tmpl ../xorg-cf-files/cygwin.tmpl ../xorg-cf-files/mingw.tmpl ../xorg-cf-files/darwinLib.tmpl ../xorg-cf-files/hpLib.tmpl ../xorg-cf-files/gnuLib.tmpl ../xorg-cf-files/ibmLib.tmpl ../xorg-cf-files/lnxLib.tmpl ../xorg-cf-files/lnxdoc.tmpl ../xorg-cf-files/necLib.tmpl ../xorg-cf-files/os2Lib.tmpl ../xorg-cf-files/osfLib.tmpl ../xorg-cf-files/sgiLib.tmpl ../xorg-cf-files/sunLib.tmpl ../xorg-cf-files/sv3Lib.tmpl ../xorg-cf-files/sv4Lib.tmpl ../xorg-cf-files/xf86.tmpl ../xorg-cf-files/xorg.tmpl ../xorg-cf-files/cross.def site.def ../xorg-cf-files/xf86site.def ../xorg-cf-files/xorgsite.def ../xorg-cf-files/xorgversion.def ../xorg-cf-files/Imake.cf ../xorg-cf-files/Amoeba.cf ../xorg-cf-files/DGUX.cf ../xorg-cf-files/dmx.cf ../xorg-cf-files/DragonFly.cf ../xorg-cf-files/FreeBSD.cf ../xorg-cf-files/Mips.cf ../xorg-cf-files/NetBSD.cf ../xorg-cf-files/OpenBSD.cf ../xorg-cf-files/Oki.cf ../xorg-cf-files/cygwin.cf ../xorg-cf-files/mingw.cf ../xorg-cf-files/Win32.cf ../xorg-cf-files/apollo.cf '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/lib/X11/config'
+ /usr/bin/install -m 644 ../xorg-cf-files/bsd.cf ../xorg-cf-files/bsdi.cf ../xorg-cf-files/convex.cf ../xorg-cf-files/cray.cf ../xorg-cf-files/fujitsu.cf ../xorg-cf-files/generic.cf ../xorg-cf-files/gnu.cf ../xorg-cf-files/hp.cf ../xorg-cf-files/ibm.cf ../xorg-cf-files/isc.cf ../xorg-cf-files/linux.cf ../xorg-cf-files/luna.cf ../xorg-cf-files/macII.cf ../xorg-cf-files/mach.cf ../xorg-cf-files/minix.cf ../xorg-cf-files/moto.cf ../xorg-cf-files/ncr.cf ../xorg-cf-files/nec.cf ../xorg-cf-files/nto.cf ../xorg-cf-files/os2.cf ../xorg-cf-files/osf1.cf ../xorg-cf-files/pegasus.cf ../xorg-cf-files/sco.cf ../xorg-cf-files/sco5.cf ../xorg-cf-files/sequent.cf ../xorg-cf-files/sgi.cf ../xorg-cf-files/sony.cf ../xorg-cf-files/sun.cf ../xorg-cf-files/svr3.cf ../xorg-cf-files/svr4.cf ../xorg-cf-files/ultrix.cf ../xorg-cf-files/usl.cf ../xorg-cf-files/lynx.cf ../xorg-cf-files/x386.cf ../xorg-cf-files/QNX4.cf ../xorg-cf-files/darwin.cf ../xorg-cf-files/xfree86.cf ../xorg-cf-files/xorg.cf '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/debian/tmp/usr/lib/X11/config'
+make[3]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/xorg-cf-files-build'
+make[2]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev/xorg-cf-files-build'
+make[1]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev'
+   debian/rules override_dh_install
+make[1]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev'
+dh_install --fail-missing
+dh_install: Please use dh_missing --list-missing/--fail-missing instead
+dh_install: This feature will be removed in compat 12.
+make[1]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev'
+   debian/rules override_dh_installdocs
+make[1]: Entering directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev'
+dh_installdocs debian/versions
+make[1]: Leaving directory '/dev/shm/systemd/test/deps/test/policykit/gobject-introspection/deps/xutils-dev/xutils-dev'
+   dh_installchangelogs -O--parallel
+   dh_installexamples -O--parallel
+   dh_installman -O--parallel
+   dh_installcatalogs -O--parallel
+   dh_installcron -O--parallel
+   dh_installdebconf -O--parallel
+   dh_installemacsen -O--parallel
+   dh_installifupdown -O--parallel
+   dh_installinfo -O--parallel
+   dh_installinit -O--parallel
+   dh_installmenu -O--parallel
+   dh_installmime -O--parallel
+   dh_installmodules -O--parallel
+   dh_installlogcheck -O--parallel
+   dh_installlogrotate -O--parallel
+   dh_installpam -O--parallel
+   dh_installppp -O--parallel
+   dh_installudev -O--parallel
+   dh_installgsettings -O--parallel
+   dh_bugfiles -O--parallel
+   dh_ucf -O--parallel
+   dh_lintian -O--parallel
+   dh_gconf -O--parallel
+dh_gconf: Please migrate to dh_installgsettings; gconf + dh_gconf is scheduled for removal.
+   dh_icons -O--parallel
+   dh_perl -O--parallel
+   dh_usrlocal -O--parallel
+   dh_link -O--parallel
+   dh_installwm -O--parallel
+   dh_installxfonts -O--parallel
+   dh_strip_nondeterminism -O--parallel
+   dh_compress -O--parallel
+   dh_fixperms -O--parallel
+   dh_missing -O--parallel
+   dh_strip -O--parallel
+   dh_makeshlibs -O--parallel
+   dh_shlibdeps -O--parallel
+dpkg-shlibdeps: warning: deprecated use of LD_LIBRARY_PATH with private library directory which interferes with cross-building, please use -l option instead
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/xutils-dev/usr/bin/revpath debian/xutils-dev/usr/bin/lndir debian/xutils-dev/usr/bin/imake debian/xutils-dev/usr/bin/makedepend were not linked against libgcc_s.so.1 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/xutils-dev/usr/bin/revpath debian/xutils-dev/usr/bin/lndir debian/xutils-dev/usr/bin/imake debian/xutils-dev/usr/bin/makedepend were not linked against libdl.so.2 (they use none of the library's symbols)
+   dh_installdeb -O--parallel
+   dh_gencontrol -O--parallel
+dpkg-gencontrol: warning: package xutils-dev: substitution variable ${perl:Depends} unused, but is defined
+dpkg-gencontrol: warning: package xutils-dev: substitution variable ${perl:Depends} unused, but is defined
+   dh_md5sums -O--parallel
+   dh_builddeb -O--parallel
+dpkg-deb: building package 'xutils-dev' in '../xutils-dev_7.7+6_amd64.deb'.
+dpkg-deb: building package 'xutils-dev-dbgsym' in '../xutils-dev-dbgsym_7.7+6_amd64.deb'.
+FAKEROOTKEY=1012147994 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules binary
+ dpkg-genbuildinfo --build=binary
+ dpkg-genchanges --build=binary >../xutils-dev_7.7+6_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian xutils-dev_7.7+6_amd64.changes ...
+W: xutils-dev: hardening-no-pie usr/bin/imake
+W: xutils-dev: hardening-no-pie usr/bin/lndir
+W: xutils-dev: hardening-no-pie usr/bin/makedepend
+W: xutils-dev: hardening-no-pie usr/bin/revpath
+N: 1 tag overridden (1 info)
+Finished running lintian.

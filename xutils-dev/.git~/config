@@ -1,0 +1,13 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://anonscm.debian.org/git/pkg-xorg/app/xutils-dev.git
+	fetch = +refs/heads/debian-unstable:refs/remotes/origin/debian-unstable
+[branch "debian-unstable"]
+	remote = origin
+	merge = refs/heads/debian-unstable
+[user]
+	email = Richard Yang <richard@yenforyang.com>

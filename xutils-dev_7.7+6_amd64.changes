@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Sun, 21 Aug 2016 17:52:24 +0200
+Source: xutils-dev
+Binary: xutils-dev
+Built-For-Profiles: nobiarch nocheck nodoc
+Architecture: amd64
+Version: 1:7.7+6
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Changed-By: Julien Cristau <jcristau@debian.org>
+Description:
+ xutils-dev - X Window System utility programs for development
+Changes:
+ xutils-dev (1:7.7+6) UNRELEASED; urgency=medium
+ .
+   * Switch all xorg.freedesktop.org URLs in packaging to https.
+Checksums-Sha1:
+ c3e3b4fcded0b0cae89e8fb36ec118baebe62abb 58712 xutils-dev-dbgsym_7.7+6_amd64.deb
+ bb35125024a086f5daeae0b5746c739169464e65 5920 xutils-dev_7.7+6_amd64.buildinfo
+ 2fede54c492a9d41fe62e830050a739cd8e3595d 285728 xutils-dev_7.7+6_amd64.deb
+Checksums-Sha256:
+ df73cb07431765133b29fbab79bea12a3d1bba822e32a36c74cfef6cb6e6fd76 58712 xutils-dev-dbgsym_7.7+6_amd64.deb
+ 0b35ff5a4a2f30a0a407a80ea008f51a5c46233e91cd497b4402b1e622a96eb2 5920 xutils-dev_7.7+6_amd64.buildinfo
+ fdf837dc962946d33f04c3b73adb0fd7c0c4457a41d0116c4ef7495a91d0a2c4 285728 xutils-dev_7.7+6_amd64.deb
+Files:
+ 446b0ca1377472c5a6b19a2249dd256e 58712 debug optional xutils-dev-dbgsym_7.7+6_amd64.deb
+ e8cefe98fd5b390791b5505b3895c9ab 5920 x11 optional xutils-dev_7.7+6_amd64.buildinfo
+ a9557f9642cbf21d54c16ea915920418 285728 x11 optional xutils-dev_7.7+6_amd64.deb
